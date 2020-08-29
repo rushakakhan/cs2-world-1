@@ -14,7 +14,7 @@ using namespace std;
 double monthlyPayment(double PV, float i, float y)  
 {
   float r = i / 12 / 100; // interest rate per period
-  float n = y / 12; // number of periods
+  float n = y * 12; // number of periods
 
   return (r * PV) / (1 - pow(1 + r, -n));
 }
@@ -35,5 +35,5 @@ int main()
   cout << "Your monthly payment is: $";
   cout.precision(2);
   cout << fixed << monthlyPayment(PV, i, y)
-       << " to pay it off in " << y << " years.";
+       << " to pay it off in " << (int)y << " years.";
 }
