@@ -3,15 +3,18 @@
 using namespace std;
 
 /*
- * Calculates payment to pay off debt
+ * Calculates monthly payment required to pay off debt
+ * in specified number of years with specified interst
+ * rate.
  * 
- * PV = Present value of borrowed amount
+ * PV = Present value owing
  * i = interest rate (yearly)
- * n = number of periods
+ * y = number of years to pay off debt
  */
-double calculatePayment(double PV, float i, float n)  
+double monthlyPayment(double PV, float i, float y)  
 {
-  float r = i / 12 / 100;
+  float r = i / 12 / 100; // interest rate per period
+  float n = y / 12; // number of periods
 
   return (r * PV) / (1 - pow(1 + r, -n));
 }
@@ -19,7 +22,7 @@ double calculatePayment(double PV, float i, float n)
 int main() 
 {
   float i;
-  int n, y;
+  float y;
   double PV;
 
   cout << "How much are you borrowing?" << endl;
@@ -29,10 +32,8 @@ int main()
   cout << "What is the amoritization in years?" << endl;
   cin >> y;
 
-  n = y * 12;
-
-  cout << "Your payment is: $";
+  cout << "Your monthly payment is: $";
   cout.precision(2);
-  cout << fixed << calculatePayment(PV, i, n)
-       << " per month, to pay it off in " << y << " years.";
+  cout << fixed << monthlyPayment(PV, i, y)
+       << " to pay it off in " << y << " years.";
 }
