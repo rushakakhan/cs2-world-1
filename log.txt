@@ -1,0 +1,72 @@
+---------------------------------------------
+Test 1: Expected input
+---------------------------------------------
+Type some words:
+hi my name is craig
+ 
+=============================
+Word count: 5
+Longest word: 5 letters
+Most vowels in word: 2
+=============================
+ 
+---------------------------------------------
+Test 2: Spaces before first word
+---------------------------------------------
+Type some words:
+     hi my name is craig
+ 
+=============================
+Word count: 5
+Longest word: 5 letters
+Most vowels in word: 2
+=============================
+
+---------------------------------------------
+Test 3: Hit tab before typing letters
+---------------------------------------------
+Type some words:
+        hi my name is craig
+ 
+=============================
+Word count: 5
+Longest word: 5 letters
+Most vowels in word: 2
+=============================
+ 
+---------------------------------------------
+Test 4: Hit enter right away
+---------------------------------------------
+Type some words:
+
+ 
+=============================
+Word count: 0
+Longest word: 0 letters
+Most vowels in word: 0
+=============================
+ 
+---------------------------------------------
+Test 5: Type excessive spaces between words
+---------------------------------------------
+Type some words:
+hi    my name    is   craig
+ 
+=============================
+Word count: 5
+Longest word: 5 letters
+Most vowels in word: 2
+=============================
+
+---------------------------------------------
+Test 6: One word, 7 vowels
+---------------------------------------------
+Type some words:
+iiiiiii
+ 
+=============================
+Word count: 1
+Longest word: 7 letters
+Most vowels in word: 7
+=============================
+ 
